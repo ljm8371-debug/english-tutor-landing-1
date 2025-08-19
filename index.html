@@ -476,25 +476,25 @@
         <div class="form-section">
             <div class="form-container">
                 <h2 style="text-align: center; color: #2c5530; margin-bottom: 30px;">무료 체험 수업 신청</h2>
-                <form id="applicationForm">
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScJdeNVjM_ASDI4UGc1ZZwlkdpBCa_wBzE14luX3hXRinbang/formResponse" method="POST" target="_blank" id="applicationForm">
                     <div class="form-group">
                         <label for="name">이름 *</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="entry.947786473" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">연락처 *</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
+                        <input type="tel" id="phone" name="entry.1283636187" required placeholder="010-0000-0000">
                     </div>
                     
                     <div class="form-group">
                         <label for="email">이메일</label>
-                        <input type="email" id="email" name="email" placeholder="example@email.com">
+                        <input type="email" id="email" name="entry.581807531" placeholder="example@email.com">
                     </div>
                     
                     <div class="form-group">
                         <label for="age">연령대</label>
-                        <select id="age" name="age">
+                        <select id="age" name="entry.1555985449">
                             <option value="">선택해주세요</option>
                             <option value="10대">10대</option>
                             <option value="20대">20대</option>
@@ -506,40 +506,40 @@
                     
                     <div class="form-group">
                         <label for="level">영어 수준</label>
-                        <select id="level" name="level">
+                        <select id="level" name="entry.1906385483">
                             <option value="">선택해주세요</option>
-                            <option value="초급">초급 (기초 단어, 간단한 문장)</option>
-                            <option value="중급">중급 (일상 대화 가능)</option>
-                            <option value="고급">고급 (자유로운 의사소통)</option>
+                            <option value="초급">초급</option>
+                            <option value="중급">중급</option>
+                            <option value="고급">고급</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="goal">학습 목표</label>
-                        <select id="goal" name="goal">
+                        <select id="goal" name="entry.1331647416">
                             <option value="">선택해주세요</option>
                             <option value="일상 회화">일상 회화</option>
                             <option value="비즈니스 영어">비즈니스 영어</option>
                             <option value="여행 영어">여행 영어</option>
-                            <option value="시험 준비">시험 준비 (토익, 토플 등)</option>
-                            <option value="기타">기타</option>
+                            <option value="시험 영어 (스피킹 시험)">시험 영어 (스피킹 시험)</option>
+                            <option value="기타타">기타</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="time">희망 수업 시간</label>
-                        <select id="time" name="time">
+                        <select id="time" name="entry.837688330">
                             <option value="">선택해주세요</option>
-                            <option value="오전 (9-12시)">오전 (9-12시)</option>
-                            <option value="오후 (12-18시)">오후 (12-18시)</option>
-                            <option value="저녁 (18-22시)">저녁 (18-22시)</option>
+                            <option value="오전">오전</option>
+                            <option value="오후">오후</option>
+                            <option value="저녁">저녁</option>
                             <option value="상담 후 결정">상담 후 결정</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="message">기타 문의사항</label>
-                        <textarea id="message" name="message" rows="4" placeholder="궁금한 점이나 특별한 요청사항이 있으시면 적어주세요."></textarea>
+                        <textarea id="message" name="entry.2143976712" rows="4" placeholder="궁금한 점이나 특별한 요청사항이 있으시면 적어주세요."></textarea>
                     </div>
                     
                     <button type="submit" class="submit-btn">무료 체험 수업 신청하기</button>
@@ -550,36 +550,28 @@
     
     <script>
         document.getElementById('applicationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = {};
-            
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-            
             // 필수 필드 체크
-            if (!data.name || !data.phone) {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!name || !phone) {
+                e.preventDefault();
                 alert('이름과 연락처는 필수 입력 사항입니다.');
                 return;
             }
             
             // 폰 번호 형식 체크
             const phoneRegex = /^010-\d{4}-\d{4}$/;
-            if (!phoneRegex.test(data.phone)) {
+            if (!phoneRegex.test(phone)) {
+                e.preventDefault();
                 alert('연락처는 010-0000-0000 형식으로 입력해주세요.');
                 return;
             }
             
-            // 성공 메시지
-            alert('신청이 완료되었습니다! 24시간 내에 연락드리겠습니다.');
-            
-            // 폼 초기화
-            this.reset();
-            
-            // 실제 서비스에서는 여기서 서버로 데이터를 전송
-            console.log('신청 데이터:', data);
+            // 성공 메시지 (폼 제출 후)
+            setTimeout(() => {
+                alert('신청이 완료되었습니다! 24시간 내에 연락드리겠습니다.');
+            }, 1000);
         });
     </script>
 </body>
