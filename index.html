@@ -43,12 +43,12 @@
         
         .hero-image {
             width: 100%;
-            height: 300px;
-            background: url('https://i.ibb.co/DgGY1dMP/image.png') center/cover;
+            height: 350px;
+            background: linear-gradient(135deg, #f0f8f0, #e8f5e8);
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #f0f8f0;
+            padding: 20px;
         }
         
         .section {
@@ -286,7 +286,72 @@
         </div>
         
         <!-- Hero Image -->
-        <div class="hero-image"></div>
+        <div class="hero-image">
+            <svg width="300" height="250" viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
+                <!-- 배경 -->
+                <rect width="300" height="250" fill="#ffffff" rx="15"/>
+                
+                <!-- 책상 -->
+                <rect x="50" y="180" width="200" height="15" fill="#8B4513" rx="3"/>
+                <rect x="45" y="195" width="210" height="8" fill="#654321"/>
+                
+                <!-- 노트북/태블릿 화면 -->
+                <rect x="80" y="120" width="140" height="90" fill="#2c3e50" rx="8"/>
+                <rect x="85" y="125" width="130" height="75" fill="#ecf0f1" rx="4"/>
+                
+                <!-- 화면 속 선생님 (원어민) -->
+                <circle cx="120" cy="150" r="15" fill="#fdbcb4"/>
+                <rect x="115" y="160" width="10" height="8" fill="#e74c3c"/>
+                <path d="M 110 145 Q 120 140 130 145" stroke="#8b4513" stroke-width="2" fill="none"/>
+                <circle cx="116" cy="147" r="1" fill="#2c3e50"/>
+                <circle cx="124" cy="147" r="1" fill="#2c3e50"/>
+                <path d="M 118 150 Q 120 152 122 150" stroke="#2c3e50" stroke-width="1" fill="none"/>
+                
+                <!-- 화면 속 말풍선 -->
+                <ellipse cx="170" cy="140" rx="25" ry="12" fill="#ffffff" stroke="#bdc3c7" stroke-width="1"/>
+                <text x="170" y="145" text-anchor="middle" font-size="8" fill="#2c3e50">Hello!</text>
+                <polygon points="145,145 155,140 155,150" fill="#ffffff" stroke="#bdc3c7" stroke-width="1"/>
+                
+                <!-- 학생 (뒷모습) -->
+                <ellipse cx="150" cy="200" rx="25" ry="12" fill="#34495e"/>
+                <circle cx="150" cy="185" r="12" fill="#fdbcb4"/>
+                <path d="M 140 180 Q 150 175 160 180" stroke="#2c3e50" stroke-width="2" fill="none"/>
+                
+                <!-- 학생 손 (키보드 치는 모습) -->
+                <ellipse cx="140" cy="195" rx="4" ry="6" fill="#fdbcb4"/>
+                <ellipse cx="160" cy="195" rx="4" ry="6" fill="#fdbcb4"/>
+                
+                <!-- 책 -->
+                <rect x="200" y="160" width="25" height="30" fill="#e74c3c" rx="2"/>
+                <rect x="202" y="162" width="21" height="26" fill="#c0392b"/>
+                <text x="212" y="175" text-anchor="middle" font-size="6" fill="#ffffff">ENG</text>
+                
+                <!-- 연필 -->
+                <rect x="220" y="175" width="2" height="20" fill="#f39c12"/>
+                <polygon points="220,175 222,175 221,170" fill="#2c3e50"/>
+                <rect x="220" y="193" width="2" height="3" fill="#e91e63"/>
+                
+                <!-- 커피컵 -->
+                <ellipse cx="70" cy="175" rx="8" ry="6" fill="#8b4513"/>
+                <ellipse cx="70" cy="173" rx="7" ry="5" fill="#d35400"/>
+                <path d="M 78 175 Q 82 175 82 180 Q 82 185 78 185" stroke="#8b4513" stroke-width="1" fill="none"/>
+                
+                <!-- 음성 표시 (스피커) -->
+                <rect x="190" y="130" width="4" height="8" fill="#3498db"/>
+                <path d="M 194 130 Q 200 132 200 138 Q 200 144 194 146" stroke="#3498db" stroke-width="1" fill="none"/>
+                <path d="M 196 132 Q 202 134 202 138 Q 202 142 196 144" stroke="#3498db" stroke-width="1" fill="none"/>
+                
+                <!-- 학습 진행 표시 -->
+                <circle cx="100" cy="135" r="3" fill="#27ae60"/>
+                <circle cx="110" cy="135" r="3" fill="#27ae60"/>
+                <circle cx="120" cy="135" r="3" fill="#95a5a6"/>
+                <circle cx="130" cy="135" r="3" fill="#95a5a6"/>
+                
+                <!-- 제목 텍스트 -->
+                <text x="150" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c5530">1:1 English Conversation</text>
+                <text x="150" y="50" text-anchor="middle" font-size="12" fill="#4a7c59">Real-time Learning with Native Speaker</text>
+            </svg>
+        </div>
         
         <!-- 1:1 학습 섹션 -->
         <div class="section section-green">
